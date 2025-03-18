@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marisol Costura y Diseño</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Pantalla de Bienvenida y Registro -->
+    <section id="bienvenida" class="portada">
+        <div class="content">
+            <h2>¡Bienvenido a Costura y Diseño!</h2>
+            <p>Por favor, ingrsa tu nombre para continuar:</p>
+            <input type="text" id="nombreUsuario" placeholder="Tu nombre" required>
+            <button onclick="registrarse()">Entrar</button>
+        </div>
+    </section>
+
+    <!-- Contenido Principal (oculto hasta el registro) -->
+    <section id="contenido" style="display: none;">
+        <header>
+            <h1 class="fade-in">Costura y Diseño</h1>
+            <nav>
+                <a href="#portada1">Explorar</a>
+                <a href="#portada2">Secciones</a>
+                <a href="#portada3">Estilos</a>
+                <a href="#confecciones">Confecciones</a>
+                <a href="#contacto">Contacto</a>
+                <a href="#comentarios" onclick="mostrarComentarios()">Ver Comentarios</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="home fade-in">
+                <h2>¡Bienvenidos a Costura y Diseños!</h2>
+                <p>Creando con amor y dedicación prendas únicas y personalizadas para cada ocasión.</p>
+                <button onclick="window.location.href='tel:+59162729206'">Contáctame: +59162729206</button>
+            </section>
+
+            <!-- Portada 1 - Diseño Destacado -->
+            <section class="portada" id="portada1">
+                <div class="cover cover1"></div>
+                <div class="content">
+                    <h4>Vestido Cherlof Azul</h4>
+                    <p>Un diseño elegante con tela suave y cómoda, ideal para cualquier evento especial.</p>
+                    <button onclick="mostrarContenido('contenido1')" class="btn">Ver más detalles</button>
+                </div>
+            </section>
+
+            <section id="contenido1" class="contenido-extra" style="display: none;">
+                <h4>Detalles del Vestido Cherlof Azul</h4>
+                <p>Disponible en todas las tallas. Tela de alta calidad que garantiza comodidad y estilo.</p>
+            </section>
+
+            <!-- Portada 2 - Nuevo Estilo -->
+            <section class="portada" id="portada2">
+                <div class="cover cover2"></div>
+                <div class="content">
+                    <h4>Vestido Turlet Rose</h4>
+                    <p>Diseño romántico con tela ligera, perfecto para climas cálidos y salidas especiales.</p>
+                    <button onclick="mostrarContenido('contenido2')" class="btn">Ver más detalles</button>
+                </div>
+            </section>
+
+            <section id="contenido2" class="contenido-extra" style="display: none;">
+                <h4>Detalles del Vestido Turlet Rose</h4>
+                <p>Colores vibrantes y ajuste perfecto, ideal para destacar en cualquier ocasión.</p>
+            </section>
+
+            <!-- Portada 3 - Tendencia Primavera -->
+            <section class="portada" id="portada3">
+                <div class="cover cover3"></div>
+                <div class="content">
+                    <h4>Vestidos Primavera Soluar</h4>
+                    <p>Frescos, ligeros y llenos de color. Ideales para la temporada de primavera-verano.</p>
+                    <button onclick="mostrarContenido('contenido3')" class="btn">Ver mas detalles </button>
+                </div>
+            </section>
+
+            <section id="contenido3" class="contenido-extra" style="display: none;">
+                <h4>Colección Primavera 2025</h4>
+                <p>Explora nuestra nueva colección inspirada en la frescura y elegancia primaveral.</p>
+            </section>
+
+            <!-- Testimonios (ocultos por defecto) -->
+            <section id="comentarios" class="portada fade-in" style="display: none;">
+                <h2>Lo que dicen mis clientas</h2>
+                <div class="testimonio hover-scale">
+                    <p>- Sofía Mendoza</p>
+                <h4>" Esta pagina hizo realidad el vestido de mis sueños. ¡Atención y calidad insuperables!"</h4>
+                </div>
+                <div class="testimonio hover-scale">
+                    <p>- Ana Ramírez</p>
+              <h4>" La modista tiene una muy buena mano para los diseños.¡Tiene un talento inimaginable!"</h4>
+                </div>
+                <button class="btn-cerrar" onclick="cerrarComentarios()">Cerrar Comentarios</button>
+            </section>
+
+            <!-- Blog / Inspiración -->
+            <section id="blog" class="portada fade-in">
+                <h2>Inspiración y Consejos</h2>
+                <article class="hover-scale">
+                    <h3>¿Cómo elegir el vestido perfecto?</h3>
+                    <p>Descubre los mejores consejos para encontrar el vestido que mejor se adapte a tu estilo.</p>
+                </article>
+                <article class="hover-scale">
+                    <h3>Tendencias en Costura 2025</h3>
+                    <p>Conoce las últimas tendencias en diseño y confección para esta temporada.</p>
+                </article>
+            </section>
+
+              <!-- Formulario de Contacto -->
+              <section id="contacto" class="portada fade-in">
+            </section>
+        </main>
+
+        <footer class="fade-in">
+            <p> 2025 Costura y Diseño</p>
+            <ul class="redes-sociales">
+                <li><a href="https://twitter.com" target="_blank" class="fa-brands fa-twitter"></a></li>
+                <li><a href="https://facebook.com" target="_blank" class="fa-brands fa-facebook"></a></li>
+                <li><a href="https://instagram.com" target="_blank" class="fa-brands fa-instagram"></a></li>
+                <li><a href="https://wa.me/XXXXXXXXXXX" target="_blank" class="fa-brands fa-whatsapp"></a></li>
+            </ul>
+        </footer>
+        <script>
+            function registrarse() {
+                const nombre = document.getElementById("nombreUsuario").value;
+                if (nombre.trim() === "") {
+                    alert("Por favor ingresa tu nombre.");
+                    return;
+                }
+    
+                // Ocultar la pantalla de bienvenida
+                document.getElementById("bienvenida").style.display = "none";
+                
+                // Mostrar el contenido principal
+                document.getElementById("contenido").style.display = "block";
+    
+                // Mostrar un mensaje de bienvenida en el contenido principal
+                alert(`¡Bienvenido, ${nombre}! Disfruta de nuestros diseños.`);
+            }
+    
+            function mostrarContenido(id) {
+                const contenido = document.getElementById(id);
+                contenido.style.display = contenido.style.display === 'none' ? 'block' : 'none';
+            }
+    
+            function mostrarComentarios() {
+                const comentarios = document.getElementById("comentarios");
+                comentarios.style.display = comentarios.style.display === 'none' ? 'block' : 'none';
+            }
+    
+            function cerrarComentarios() {
+                const comentarios = document.getElementById("comentarios");
+                comentarios.style.display = 'none';
+            }
+        </script>
+</body>
+</html>
+
+
+
+
+
+
+
